@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+cd $HOME/RIOBOTSS
+token="1610579578:AAE7uqsCjXZMQkhuyP0nrMTsPuMlFaAezLk"
+rm -fr RIOBOTSS.lua
+wget "https://raw.githubusercontent.com/RIOBOTSS/RIOBOTSS/master/RIOBOTSS.lua"
+while(true) do
+rm -fr ../.telegram-cli
+./tg -s ./RIOBOTSS.lua -p PROFILE --bot=$token
+done
